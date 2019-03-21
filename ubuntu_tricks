@@ -1,0 +1,18 @@
+to check and enable/disable pointer position with ctrl key
+***********************************************************
+gsettings get org.gnome.settings-daemon.peripherals.mouse locate-pointer
+enable --> ~$gsettings set org.gnome.settings-daemon.peripherals.mouse locate-pointer true
+disable --> ~$gsettings set org.gnome.settings-daemon.peripherals.mouse locate-pointer false
+
+java8 install/update
+********************
+add oracle ppa:# sudo add-apt-repository ppa:webupd8team/java
+update from ppa: # sudo apt-get update
+install from ppa: # sudo apt-get install oracle-java8-installer
+check version after install: # javac -version
+update default java: # sudo update-alternatives --config java
+set environment: # sudo nano /etc/environment
+  *add this in last line: $ JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+refresh environemnt vars: $ source /etc/environment
+check env set: $ echo $JAVA_HOME
+
