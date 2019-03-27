@@ -16,3 +16,9 @@ set environment: # sudo nano /etc/environment
 refresh environemnt vars: $ source /etc/environment
 check env set: $ echo $JAVA_HOME
 
+
+apt behind a proxy env
+**********************
+goto /etc/apt/apt.conf and at the end add
+Acquire::http::Proxy "http://user:password:@proxy_server:8080";
+
